@@ -9,9 +9,9 @@ ContagionTrap monitors liquidity levels of a neighboring DEX pool to detect shar
 It acts as an early warning mechanism that triggers a response when the newest liquidity snapshot drops below 50% of the recent average.
 
 ##  Trigger Logic
-- Collects reserve data (`reserve0 + reserve1`) from a UniswapV2 compatible pool.
-- Maintains a history of liquidity snapshots.
-- Compares the latest liquidity value to the average of previous snapshots.
+Collects reserve data (`reserve0 + reserve1`) from a UniswapV2 compatible pool.
+Maintains a history of liquidity snapshots.
+Compares the latest liquidity value to the average of previous snapshots.
 - **Triggers** if:  
   `newest_liquidity * 2 < average_previous_liquidity` 
 
